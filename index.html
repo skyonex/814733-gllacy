@@ -12,10 +12,10 @@
           <img src="http://placehold.it/160x75" width="160" height="75" alt="Логотип магазина Глэйси">
         </a>
         <ul class="site-navigation">
-          <li class="active">
+          <li>
             <a>Каталог</a>
             <ul class="submenu">
-              <li class="active">Новинки</li>
+              <li><a href="">Новинки</a></li>
               <li><a href="">Сливочное</a></li>
               <li><a href="">Щербеты</a></li>
               <li><a href="">Фруктовый лед</a></li>
@@ -26,9 +26,21 @@
           <li><a href="">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="search-link">Поиск</li>
-          <li class="login-link">Вход</li>
-          <li class="cart-link">Пусто</li>
+          <li class="search-link">
+            <a>Поиск</a>
+            <div class="popup popup-search">
+              <!-- Здесь будет форма -->
+            </div>
+          </li>
+          <li class="login-link">
+            <a>Вход</a>
+            <div class="popup popup-login">
+              <!-- Здесь будет форма -->
+            </div>
+          </li>
+          <li class="cart-link cart-empty">
+            <a>Пусто</a>
+          </li>
         </ul>
         <div class="header-contacts">
           <p>С 10 до 20, ежедневно</p>
