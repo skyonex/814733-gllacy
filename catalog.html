@@ -41,7 +41,28 @@
           <li class="cart-link cart-notempty">
             <a>2 товара</a>
             <div class="popup popup-cart">
-              <!-- Здесь будет форма -->
+              <table>
+                <tr>
+                  <td><button class="btn btn-remove-item">x</button></td>
+                  <td><img src="" alt=""></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг</td>
+                  <td>x</td>
+                  <td>200 руб.</td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button class="btn btn-remove-item">x</button></td>
+                  <td><img src="" alt=""></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг</td>
+                  <td>x</td>
+                  <td>300 руб.</td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <div class="total-price">Итого: 750 руб.</div>
+              <a href="" class="confirm-order-link">Оформить заказ</a>
             </div>
           </li>
         </ul>
@@ -57,7 +78,7 @@
         <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
         <li class="breadcrumbs-item active"><a>Сливочное</a></li>
       </ol>
-      <h1>Сливочное мороженое</h1>
+      <h1 class="page-title">Сливочное мороженое</h1>
       <!-- Фильтры -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -274,36 +295,3 @@
       </p>
     </footer>
   </div>
-  <!-- Выпадающее меню корзины -->
-  <section class="popup popup-cart">
-    <ul>
-      <li class="active">
-        <table>
-          <tr>
-            <td><img src="" alt=""></td>
-            <td>Пломбир с апельсиновым джемом</td>
-            <td>1,5 кг</td>
-            <td>x</td>
-            <td>200 руб.</td>
-            <td>300 руб.</td>
-          </tr>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tr>
-            <td><img src="" alt=""></td>
-            <td>Клубничный пломбир с присыпкой  из белого шоколада</td>
-            <td>1,5 кг</td>
-            <td>x</td>
-            <td>300 руб.</td>
-            <td>450 руб.</td>
-          </tr>
-        </table>
-      </li>
-    </ul>
-    <div class="total-price">
-      Итого: 750 руб.
-    </div>
-    <a href="" class="btn btn-confirm-order">Оформить заказ</a>
-  </section>
