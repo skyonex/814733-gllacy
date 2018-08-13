@@ -173,82 +173,74 @@
         </p>
       </section>
       <!-- Новое в блоге -->
-      <section class="blog-news">
-        <h4>Новое в нашем блоге</h4>
-        <a href="">10 способов сервировки фруктовых щербетов к столу</a>
-      </section>
+      <div class="blog-news">
+        <h2 class="blog-news-title">Новое в нашем блоге</h2>
+        <a class="blog-news-link" href="">10 способов сервировки фруктовых щербетов к столу</a>
+      </div>
       <!-- Подписка на рассылку -->
-      <section class="subscription">
+      <div class="subscription">
         <h4 class="visually-hidden">Подписка на новости магазина</h4>
         <p>
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
         <!-- Здесь будет форма -->
-      </section>
+      </div>
     </main>
   </div>
   <!-- Карта -->
   <div class="map">
-    <div class="contacts">
-      <dl class="contacts-address">
-        <dt>
-          Адрес главного офиса и офлайн-магазина:
-        </dt>
-        <dd>
-          ул. Большая Конюшенная 19/8, Санкт-Петербург
-        </dd>
-      </dl>
-      <dl class="contacts-phone">
-        <dt>
-          Для заказов по телефону:
-        </dt>
-        <dd>
-          <span class="phone">8 812 450-25-25</span>
-          <span class="working-hours">(с 10 до 20 ежедневно)</span>
-        </dd>
-      </dl>
-      <a href="" class="feedback-link">Форма обратной связи</a>
-    </div>
+
   </div>
   <div class="content-wrapper">
     <!-- Подвал -->
     <footer class="main-footer">
+      <div class="contacts">
+        <dl class="contacts-address">
+          <dt>
+            Адрес главного офиса и офлайн-магазина:
+          </dt>
+          <dd>
+            ул. Большая Конюшенная 19/8, Санкт-Петербург
+          </dd>
+        </dl>
+        <dl class="contacts-phone">
+          <dt>
+            Для заказов по телефону:
+          </dt>
+          <dd class="working-hours">
+            <a class="contacts-phone" href="tel:=7-812-450-25-25">8 812 450-25-25</a>
+            (с 10 до 20 ежедневно)
+          </dd>
+        </dl>
+        <a class="feedback-link" href="write-us.html">Форма обратной связи</a>
+      </div>
+
       <div class="footer-social">
-        <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
+        <ul class="list-social">
+          <li><a class="social-link" href="#">Твиттер</a></li>
+          <li><a class="social-link" href="#">Инстаграм</a></li>
+          <li><a class="social-link" href="#">Фейсбук</a></li>
+          <li><a class="social-link" href="#">Вконтакте</a></li>
         </ul>
       </div>
-      <nav class="footer-navigation">
+      <div class="footer-navigation">
         <ul>
           <li class="heart"><a href="">Для поставщиков</a></li>
           <li><a href="">О производстве</a></li>
-        </ul>
-        <ul>
-          <li class="heart"><a href="">Наши документы</a></li>
+          <li><a href="">Наши документы</a></li>
           <li><a href="">Экологические стандарты</a></li>
         </ul>
-      </nav>
+      </div>
       <p class="footer-copyright">
-        Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        Сделано в <a class="copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
   </div>
-  <!-- Форма входа -->
-  <section class="popup popup-login">
-    <!-- Здесь будет форма -->
-  </section>
-  <!-- Форма поиска -->
-  <section class="popup popup-search">
-    <!-- Здесь будет форма -->
-  </section>
   <!-- Форма обратной связи -->
-  <section class="modal modal-feedback">
-    <h2>Мы обязательно Вам ответим!</h2>
+  <div class="modal modal-feedback">
+    <h2 class="modal-feedback-title">Мы обязательно Вам ответим!</h2>
     <!-- Здесь будет форма -->
     <span class="modal-close">x</span>
-  </section>
+  </div>
 </body>
 </html>
