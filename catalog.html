@@ -29,13 +29,33 @@
           <li class="search-link">
             <a>Поиск</a>
             <div class="popup popup-search">
-              <!-- Здесь будет форма -->
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <div class="field-wrapper">
+                  <label class="visually-hidden" for="search-string">Что ищем?</label>
+                  <input type="text" id="search-string" name="search-string" value="">
+                </div>
+              </form>
             </div>
           </li>
           <li class="login-link">
             <a>Вход</a>
             <div class="popup popup-login">
-              <!-- Здесь будет форма -->
+              <!-- Форма авторизации -->
+              <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+                <div class="field-wrapper">
+                  <label for="login" class="visually-hidden">Логин</label>
+                  <input type="text" name="login" id="login">
+                </div>
+                <div class="field-wrapper">
+                  <label for="password" class="visually-hidden">Пароль</label>
+                  <input type="text" name="password" id="password">
+                </div>
+                <p class="login-form-info">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+                <button class="btn" type="submit" name="login-submit">Войти</button>
+              </form>
             </div>
           </li>
           <li class="cart-link cart-notempty">
@@ -62,7 +82,7 @@
                 </tr>
               </table>
               <div class="total-price">Итого: 750 руб.</div>
-              <a href="#" class="confirm-order-link">Оформить заказ</a>
+              <a href="#" class="btn">Оформить заказ</a>
             </div>
           </li>
         </ul>
@@ -82,7 +102,70 @@
       <!-- Фильтры -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <!-- Форма фильтров -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend>Сортировка</legend>
+            <select name="sortby" id="sortby">
+              <option value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat-content">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Цена: 100 руб. - 500 руб.</legend>
+            <input type="range" id="price" name="price" min="100" max="500" step="1">
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul>
+              <li>
+                <input type="radio" id="fat-content-0" name="fat-content" value="0">
+                <label for="fat-content-0">0%</label>
+              </li>
+              <li>
+                <input type="radio" id="fat-content-less10" name="fat-content" value="less10">
+                <label for="fat-content-less10">меньше 10%</label>
+              </li>
+              <li>
+                <input type="radio" id="fat-content-less30" name="fat-content" value="less30">
+                <label for="fat-content-less30">меньше 30%</label>
+              </li>
+              <li>
+                <input type="radio" id="fat-content-more30" name="fat-content" value="more30">
+                <label for="fat-content-more30">выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul>
+              <li>
+                <input class="visually-hidden" type="checkbox" id="choco" name="choco" value="yes">
+                <label for="choco">шоколадные</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" id="sugar" name="sugar" value="yes">
+                <label for="sugar">сахарные присыпки</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" id="fruits" name="fruits" value="yes">
+                <label for="fruits">фрукты</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" id="syrups" name="syrups" value="yes">
+                <label for="syrups">сиропы</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" id="jams" name="jams" value="yes">
+                <label for="jams">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="btn" name="submit-filters">Применить</button>
+        </form>
       </section>
 
       <!-- Каталог мороженого -->
@@ -276,10 +359,10 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="list-social">
-          <li><a class="social-link" href="#">Твиттер</a></li>
-          <li><a class="social-link" href="#">Инстаграм</a></li>
-          <li><a class="social-link" href="#">Фейсбук</a></li>
-          <li><a class="social-link" href="#">Вконтакте</a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Твиттер">Твиттер</a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Инстаграм">Инстаграм</a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Фейсбук">Фейсбук</a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на ВКонтакте">ВКонтакте</a></li>
         </ul>
       </div>
       <div class="footer-navigation">
