@@ -29,10 +29,11 @@
           <li class="search-link">
             <a>Поиск</a>
             <div class="popup popup-search">
+              <!-- Форма поиска -->
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="field-wrapper">
-                  <label class="visually-hidden" for="search-string">Что ищем?</label>
-                  <input type="text" id="search-string" name="search-string" value="">
+                  <input type="search" id="search-string" name="search-string" value="">
+                  <label for="search-string">Что ищем?</label>
                 </div>
               </form>
             </div>
@@ -43,14 +44,14 @@
               <!-- Форма авторизации -->
               <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
                 <div class="field-wrapper">
-                  <label for="login" class="visually-hidden">Логин</label>
+                  <label for="login">Логин</label>
                   <input type="text" name="login" id="login">
                 </div>
                 <div class="field-wrapper">
-                  <label for="password" class="visually-hidden">Пароль</label>
-                  <input type="text" name="password" id="password">
+                  <label for="password">Пароль</label>
+                  <input type="password" name="password" id="password">
                 </div>
-                <p class="login-form-info">
+                <p class="login-form-links">
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
                 </p>
@@ -104,8 +105,8 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Форма фильтров -->
         <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <legend>Сортировка</legend>
+          <fieldset class="filters-group">
+            <legend class="filters-title">Сортировка</legend>
             <select name="sortby" id="sortby">
               <option value="popular">по популярности</option>
               <option value="cheap">сначала недорогие</option>
@@ -113,53 +114,53 @@
               <option value="fat-content">по жирности</option>
             </select>
           </fieldset>
-          <fieldset>
-            <legend>Цена: 100 руб. - 500 руб.</legend>
+          <fieldset class="filters-group">
+            <legend class="filters-title">Цена: 100 руб. - 500 руб.</legend>
             <input type="range" id="price" name="price" min="100" max="500" step="1">
           </fieldset>
-          <fieldset>
-            <legend>Жирность:</legend>
-            <ul>
+          <fieldset class="filters-group">
+            <legend class="filters-title">Жирность:</legend>
+            <ul class="filters-list">
               <li>
-                <input type="radio" id="fat-content-0" name="fat-content" value="0">
-                <label for="fat-content-0">0%</label>
+                <input class="visually-hidden" type="radio" id="fat-content-0" name="fat-content" value="0">
+                <label class="catalog-filter-label filter-label-radio" for="fat-content-0">0%</label>
               </li>
               <li>
-                <input type="radio" id="fat-content-less10" name="fat-content" value="less10">
-                <label for="fat-content-less10">меньше 10%</label>
+                <input class="visually-hidden" type="radio" id="fat-content-less10" name="fat-content" value="less10">
+                <label class="catalog-filter-label filter-label-radio" for="fat-content-less10">меньше 10%</label>
               </li>
               <li>
-                <input type="radio" id="fat-content-less30" name="fat-content" value="less30">
-                <label for="fat-content-less30">меньше 30%</label>
+                <input class="visually-hidden" type="radio" id="fat-content-less30" name="fat-content" value="less30">
+                <label class="catalog-filter-label filter-label-radio" for="fat-content-less30">меньше 30%</label>
               </li>
               <li>
-                <input type="radio" id="fat-content-more30" name="fat-content" value="more30">
-                <label for="fat-content-more30">выше 30%</label>
+                <input class="visually-hidden" type="radio" id="fat-content-more30" name="fat-content" value="more30">
+                <label class="catalog-filter-label filter-label-radio" for="fat-content-more30">выше 30%</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Наполнители:</legend>
-            <ul>
+          <fieldset class="filters-group">
+            <legend class="filters-title">Наполнители:</legend>
+            <ul class="filters-list">
               <li>
                 <input class="visually-hidden" type="checkbox" id="choco" name="choco" value="yes">
-                <label for="choco">шоколадные</label>
+                <label class="catalog-filter-label filter-label-check" for="choco">шоколадные</label>
               </li>
               <li>
                 <input class="visually-hidden" type="checkbox" id="sugar" name="sugar" value="yes">
-                <label for="sugar">сахарные присыпки</label>
+                <label class="catalog-filter-label filter-label-check" for="sugar">сахарные присыпки</label>
               </li>
               <li>
                 <input class="visually-hidden" type="checkbox" id="fruits" name="fruits" value="yes">
-                <label for="fruits">фрукты</label>
+                <label class="catalog-filter-label filter-label-check" for="fruits">фрукты</label>
               </li>
               <li>
                 <input class="visually-hidden" type="checkbox" id="syrups" name="syrups" value="yes">
-                <label for="syrups">сиропы</label>
+                <label class="catalog-filter-label filter-label-check" for="syrups">сиропы</label>
               </li>
               <li>
                 <input class="visually-hidden" type="checkbox" id="jams" name="jams" value="yes">
-                <label for="jams">джемы</label>
+                <label class="catalog-filter-label filter-label-check" for="jams">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -359,10 +360,10 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="list-social">
-          <li><a class="social-link" href="#" aria-label="Подписаться на Твиттер">Твиттер</a></li>
-          <li><a class="social-link" href="#" aria-label="Подписаться на Инстаграм">Инстаграм</a></li>
-          <li><a class="social-link" href="#" aria-label="Подписаться на Фейсбук">Фейсбук</a></li>
-          <li><a class="social-link" href="#" aria-label="Подписаться на ВКонтакте">ВКонтакте</a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Твиттер"></a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Инстаграм"></a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на Фейсбук"></a></li>
+          <li><a class="social-link" href="#" aria-label="Подписаться на ВКонтакте"></a></li>
         </ul>
       </div>
       <div class="footer-navigation">
@@ -378,3 +379,5 @@
       </p>
     </footer>
   </div>
+</body>
+</html>
