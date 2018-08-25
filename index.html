@@ -17,8 +17,8 @@
         <ul class="site-navigation">
           <li>
             <a>Каталог</a>
-            <ul class="submenu">
-              <li><a href="#">Новинки</a></li>
+            <ul class="site-navigation-submenu">
+              <li><a>Новинки</a></li>
               <li><a href="#">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
@@ -33,7 +33,7 @@
             <a>Поиск</a>
             <div class="popup popup-search">
               <!-- Форма поиска -->
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="field-wrapper">
                   <input type="search" id="search-string" name="search-string" value="">
                   <label for="search-string">Что ищем?</label>
@@ -45,7 +45,7 @@
             <a>Вход</a>
             <div class="popup popup-login">
               <!-- Форма авторизации -->
-              <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+              <form class="login-form" action="https://echo.htmlacademy.ru" class="login-form" method="post">
                 <div class="field-wrapper">
                   <label for="login">Логин</label>
                   <input type="text" name="login" id="login">
@@ -77,22 +77,22 @@
       <!-- Слайдер -->
       <div class="carousel">
         <ol class="carousel-indicators">
-          <li class="active"></li>
+          <li class="current"></li>
           <li></li>
           <li></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item current">
             <div class="carousel-title">Крем-брюле и пломбир с малиновым джемом</div>
-            <a href="#" class="btn">Дайте оба</a>
+            <a href="#" class="btn">Давайте оба</a>
           </div>
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <div class="carousel-title">Шоколадный пломбир и лимонный сорбет</div>
-            <a href="#" class="btn">Дайте оба</a>
+            <a href="#" class="btn">Давайте оба</a>
           </div>
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <div class="carousel-title">Пломбир с помадкой и клубничный щербет</div>
-            <a href="#" class="btn">Дайте оба</a>
+            <a href="#" class="btn">Давайте оба</a>
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
         <!-- Форма подписки -->
-        <form action="https://echo.htmlacademy.ru">
+        <form class="subscription-form" action="https://echo.htmlacademy.ru">
           <div class="field-wrapper">
             <label class="visually-hidden" for="subscription-email">Электронная почта</label>
             <input type="text" id="subscription-email" name="subscription-email">
@@ -271,7 +271,7 @@
   <div class="modal modal-feedback">
     <h2 class="modal-feedback-title">Мы обязательно Вам ответим!</h2>
     <!-- Форма обратной связи -->
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="field-wrapper">
         <label for="client-name">Как Вас зовут?</label>
         <input type="text" id="client-name" name="client-name" value="">

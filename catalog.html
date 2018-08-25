@@ -15,10 +15,10 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
         </a>
         <ul class="site-navigation">
-          <li class="active">
+          <li class="current">
             <a>Каталог</a>
-            <ul class="submenu">
-              <li class="active">Новинки</li>
+            <ul class="site-navigation-submenu">
+              <li><a>Новинки</a></li>
               <li><a href="#">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
@@ -33,7 +33,7 @@
             <a>Поиск</a>
             <div class="popup popup-search">
               <!-- Форма поиска -->
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="field-wrapper">
                   <input type="search" id="search-string" name="search-string" value="">
                   <label for="search-string">Что ищем?</label>
@@ -45,7 +45,7 @@
             <a>Вход</a>
             <div class="popup popup-login">
               <!-- Форма авторизации -->
-              <form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+              <form class="login-form" action="https://echo.htmlacademy.ru" class="login-form" method="post">
                 <div class="field-wrapper">
                   <label for="login">Логин</label>
                   <input type="text" name="login" id="login">
@@ -67,7 +67,7 @@
             <div class="popup popup-cart">
               <table>
                 <tr>
-                  <td><button class="btn btn-remove-item">x</button></td>
+                  <td><button class="btn-remove-item">x</button></td>
                   <td><img src="img/cart-item-1-small.jpg" width="33" height="33" alt=""></td>
                   <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг</td>
@@ -76,7 +76,7 @@
                   <td>300 руб.</td>
                 </tr>
                 <tr>
-                  <td><button class="btn btn-remove-item">x</button></td>
+                  <td><button class="btn-remove-item">x</button></td>
                   <td><img src="img/cart-item-2-small.jpg" width="33" height="33" alt=""></td>
                   <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td>1,5 кг</td>
@@ -100,7 +100,7 @@
       <ol class="breadcrumbs">
         <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-item active"><a>Сливочное</a></li>
+        <li class="breadcrumbs-item current"><a>Сливочное</a></li>
       </ol>
       <h1 class="page-title">Сливочное мороженое</h1>
       <!-- Фильтры -->
