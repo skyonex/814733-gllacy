@@ -21,6 +21,8 @@ a:active {
 }
 
 .main-navigation {
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 18px;
 }
@@ -29,11 +31,38 @@ a:active {
   list-style: none;
 }
 
-.catalog-list {
-  list-style: none;
+.list-social li {
+  display: inline-block;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #cccccc;
+}
+
+.social-link-tw {
+  background: url('../img/twitter.svg') no-repeat 50% 50%;
+}
+
+.social-link-inst {
+  background: url('../img/instagram.svg') no-repeat 50% 50%;
+}
+
+.social-link-fb {
+  background: url('../img/fb.svg') no-repeat 50% 50%;
+}
+
+.social-link-vk {
+  background: url('../img/vk.svg') no-repeat 50% 50%;
 }
 
 .breadcrumbs {
+  display: flex;
   list-style: none;
 }
 
@@ -171,6 +200,16 @@ a:active {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+.btn:hover {
+  background-image: linear-gradient(to top, rgb(242,104,67) 0%, rgb(244,133,104) 100%);
+  color: #ffffff;
+}
+
+.btn:active {
+  background-image: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
 .header-contacts {
   text-align: right;
 }
@@ -185,6 +224,10 @@ a:active {
   line-height: 24px;
   font-weight: bold;
   text-decoration: none;
+}
+
+.carousel {
+  margin-bottom: 40px;
 }
 
 .carousel-indicators {
@@ -202,7 +245,19 @@ a:active {
 }
 
 .banners-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+.banners-item {
+  padding: 5px 30px;
+  margin-bottom: 40px;
+  width: 500px;
+  height: 220px;
+  border-radius: 20px;
 }
 
 .banners-item:first-child {
@@ -228,6 +283,27 @@ a:active {
   line-height: 41px;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+}
+
+.catalog-item .btn {
+  order: 1;
+}
+
 .catalog-item-price {
   font-size: 45px;
   font-weight: bold;
@@ -245,10 +321,13 @@ a:active {
 }
 
 .about-shop {
+  padding: 5px 30px;
+  margin-bottom: 40px;
   background-color: #f0e5c6;
   background-image: url('../img/wafer-background.jpg');
   background-repeat: repeat;
   background-position: 0 0;
+  border-radius: 20px;
 }
 
 .about-shop-title {
@@ -263,10 +342,17 @@ a:active {
 }
 
 .blog-news {
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  width: 560px;
+  height: 220px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-background.jpg");
-  background-position: 0 0;
+  background-position: 120% 20%;
   background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
 .blog-news-title {
@@ -286,7 +372,13 @@ a:active {
 }
 
 .subscription {
+  float: right;
+  padding: 0;
+  margin-bottom: 40px;
+  width: 560px;
+  height: 220px;
   background-color: #f8f7f4;
+  border-radius: 20px;
 }
 
 .subscription p {
@@ -294,8 +386,16 @@ a:active {
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: 305px;
   background-color: #ffffff;
   color: #000000;
+  min-height: 300px;
+  border-radius: 15px;
 }
 
 .contacts-address dt {
@@ -330,6 +430,8 @@ a:active {
 
 .footer-navigation ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-navigation a {
@@ -361,4 +463,58 @@ a:active {
 .filters-title {
   font-size: 14px;
   line-height: 16px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.modal {
+  display: none;
+}
+
+/* ------ Сетка ------ */
+
+html,
+body {
+  min-width: 1200px;
+}
+
+.content-wrapper {
+  min-width: 1200px;
+}
+
+.main-header {
+  margin: 0 auto;
+  width: 1145px;
+  padding: 10px 0 0 0;
+}
+
+.main-content {
+  margin: 0 auto;
+  padding: 0;
+  width: 1145px;
+}
+
+.main-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.map {
+  width: 100%;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 20px auto 30px auto;
+  width: 1145px;
 }
