@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -35,7 +35,7 @@
               <!-- Форма поиска -->
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="field-wrapper">
-                  <input type="search" id="search-string" name="search-string" value="">
+                  <input class="input-text" type="search" id="search-string" name="search-string" value="">
                   <label for="search-string">Что ищем?</label>
                 </div>
               </form>
@@ -48,11 +48,11 @@
               <form class="login-form" action="https://echo.htmlacademy.ru" class="login-form" method="post">
                 <div class="field-wrapper">
                   <label for="login">Логин</label>
-                  <input type="text" name="login" id="login">
+                  <input class="input-text" type="text" name="login" id="login">
                 </div>
                 <div class="field-wrapper">
                   <label for="password">Пароль</label>
-                  <input type="password" name="password" id="password">
+                  <input class="input-text" type="password" name="password" id="password">
                 </div>
                 <p class="login-form-links">
                   <a href="#">Забыли пароль?</a>
@@ -211,7 +211,7 @@
         <form class="subscription-form" action="https://echo.htmlacademy.ru">
           <div class="field-wrapper">
             <label class="visually-hidden" for="subscription-email">Электронная почта</label>
-            <input type="text" id="subscription-email" name="subscription-email">
+            <input class="input-text" type="email" id="subscription-email" name="subscription-email">
           </div>
           <button class="btn" type="submit" name="subscription-submit">Отправить</button>
         </form>
@@ -274,11 +274,11 @@
     <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="field-wrapper">
         <label for="client-name">Как Вас зовут?</label>
-        <input type="text" id="client-name" name="client-name" value="">
+        <input class="input-text" type="text" id="client-name" name="client-name" value="">
       </div>
       <div class="field-wrapper">
         <label for="client-email">Ваша почта для ответа?</label>
-        <input type="text" id="client-email" name="client-email" value="">
+        <input class="input-text" type="text" id="client-email" name="client-email" value="">
       </div>
       <div class="field-wrapper">
         <label for="client-feedback">Текст обращения</label>
