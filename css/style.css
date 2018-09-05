@@ -1,3 +1,7 @@
+html, * {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,11 +32,13 @@ a:active {
 }
 
 .list-social {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 .list-social li {
-  display: inline-block;
+  margin-right: 10px;
 }
 
 .social-link {
@@ -82,8 +88,18 @@ a:active {
   display: inline-block;
 }
 
-.site-navigation,
+.site-navigation {
+  display: flex;
+  list-style: none;
+}
+
+.site-navigation li {
+  position: relative;
+  margin-right: 25px;
+}
+
 .site-navigation-submenu {
+  display: none;
   list-style: none;
 }
 
@@ -107,6 +123,10 @@ a:active {
 }
 
 .user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  padding:0;
   list-style: none;
 }
 
@@ -185,7 +205,20 @@ a:active {
   line-height: 24p;
 }
 
+.search-link {
+  position: relative;
+}
+
+.login-link {
+  position: relative;
+}
+
+.cart-link {
+  position: relative;
+}
+
 .btn {
+  display: inline-block;
   padding: 10px 25px;
   background-image: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   border: 0;
@@ -239,6 +272,14 @@ a:active {
   line-height: 72px;
 }
 
+.carousel-item:nth-child(2) {
+  display: none;
+}
+
+.carousel-item:nth-child(3) {
+  display: none;
+}
+
 .carousel-item .btn {
   font-size: 32px;
   line-height: 44px;
@@ -246,17 +287,24 @@ a:active {
 
 .banners-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  margin-bottom: 40px;
   list-style: none;
 }
 
 .banners-item {
-  padding: 5px 30px;
-  margin-bottom: 40px;
-  width: 500px;
-  height: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 520px;
   border-radius: 20px;
 }
 
@@ -272,12 +320,22 @@ a:active {
   background-repeat: no-repeat;
 }
 
+.banners-item .btn {
+  align-self: flex-end;
+}
+
 .banners-text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
   font-size: 18px;
   line-height: 22px;
 }
 
 .banners-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 35px;
   font-weight: bold;
   line-height: 41px;
@@ -286,11 +344,10 @@ a:active {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .catalog-item {
@@ -300,8 +357,12 @@ a:active {
   width: 260px;
 }
 
+.catalog-item:not(:nth-of-type(4n)) {
+  margin-right: 35px;
+}
+
 .catalog-item .btn {
-  order: 1;
+  display: none;
 }
 
 .catalog-item-price {
@@ -320,8 +381,19 @@ a:active {
   border-radius: 50%;
 }
 
+.catalog-item-title {
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  order: 1;
+}
+
 .about-shop {
-  padding: 5px 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
   margin-bottom: 40px;
   background-color: #f0e5c6;
   background-image: url('../img/wafer-background.jpg');
@@ -330,7 +402,17 @@ a:active {
   border-radius: 20px;
 }
 
+.about-shop-text-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .about-shop-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
@@ -338,16 +420,24 @@ a:active {
 }
 
 .about-shop-text {
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  margin-bottom: 30px;
   color: #000000;
 }
 
+.wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .blog-news {
-  float: left;
   padding: 0;
   margin: 0;
-  margin-bottom: 40px;
   width: 560px;
-  height: 220px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-background.jpg");
   background-position: 120% 20%;
@@ -372,11 +462,9 @@ a:active {
 }
 
 .subscription {
-  float: right;
+  margin: 0;
   padding: 0;
-  margin-bottom: 40px;
   width: 560px;
-  height: 220px;
   background-color: #f8f7f4;
   border-radius: 20px;
 }
@@ -444,6 +532,11 @@ a:active {
   line-height: 18px;
 }
 
+.popup {
+  display: none;
+  position: absolute;
+}
+
 .modal-feedback-title {
   font-size: 24px;
   line-height: 28px;
@@ -479,31 +572,11 @@ a:active {
 
 /* ------ Сетка ------ */
 
-html,
-body {
-  min-width: 1200px;
-}
-
 .content-wrapper {
-  min-width: 1200px;
-}
-
-.main-header {
   margin: 0 auto;
-  width: 1145px;
-  padding: 10px 0 0 0;
-}
-
-.main-content {
-  margin: 0 auto;
-  padding: 0;
-  width: 1145px;
-}
-
-.main-content::after {
-  content: "";
-  display: table;
-  clear: both;
+  padding: 0 27px;
+  width: 1200px;
+  box-sizing: inherit;
 }
 
 .map {
@@ -512,9 +585,7 @@ body {
 
 .main-footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 0;
-  margin: 20px auto 30px auto;
-  width: 1145px;
+  margin: 20px auto 30px;
 }
